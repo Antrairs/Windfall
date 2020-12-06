@@ -13,6 +13,8 @@ if __name__ == '__main__':
     y1 = int(m.group(2))
     im = Image.open(im_path)
     x2, y2 = im.size
+    if x1>x2 or y1>y2:
+        raise ValueError("需求大小必须小于图片大小")
     if (a := x1 / x2) > (b := y1 / y2):
         y_ = y1 / a
         x_ = x2
