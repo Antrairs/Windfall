@@ -1,3 +1,7 @@
+'''
+python cps.py image_name size(xxx,xxx) [-o new_image_name]
+'''
+
 from sys import argv
 from re import match
 from PIL import Image
